@@ -24,7 +24,7 @@
             document.getElementById("rollbtn").onclick = function() {roll()};
 
             function roll() {
-                num = Math.floor(randomNumber(1,6))
+                num = Math.floor(randomNumber(1,7))
                 document.getElementById("image").src = 'assets/' + num + '.png';
                 document.getElementById("text").innerHTML = "You rolled a: " + num + '!';
             }
