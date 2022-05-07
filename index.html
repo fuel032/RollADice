@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Roll A Dice</title>
+        <link rel="icon" type="image/ico" href="icon.ico">
+    </head>
+
+    <body>
+        <main>
+            <center>
+                <h1>Roll A Dice</h1>
+                <img src="assets/dice.png" width="250" height="250" id="image">
+                <h1 id="text">You rolled a:</h1>
+            </center>
+
+            <center><button type="button" id="rollbtn">Roll A Dice</button></center>
+        </main>
+
+        <script>
+            function randomNumber(min, max) { 
+                return Math.random() * (max - min) + min;
+            } 
+
+            document.getElementById("rollbtn").onclick = function() {roll()};
+
+            function roll() {
+                num = Math.floor(randomNumber(1,6))
+                document.getElementById("image").src = 'assets/' + num + '.png';
+                document.getElementById("text").innerHTML = "You rolled a: " + num + '!';
+            }
+        </script>
+    </body>
+</html>
